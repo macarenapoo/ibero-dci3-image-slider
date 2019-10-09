@@ -11,7 +11,7 @@ El objetivo es crear un slider de imágenes donde:
 
 ### ¿Cómo está estructurado el slider?
 
-![Diagrama Slider 1](images/Diagrama_Slide1.png "Diagrama 1")
+![Diagrama Slider 1](images/Diagrama_Silde1.png "Diagrama 1")
 
 El slider esta compuesto de la siguiente forma:
 
