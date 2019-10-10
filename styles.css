@@ -1,83 +1,81 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.slider {
-  width: 640px;
-  height: 420px;
-  overflow: hidden;
+#wrapper {
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 8% auto;
+  padding: 6.7% 5.4%;
   position: relative;
-  background-color: #ededed;
+  background-color: #fff;
 }
 
-.slider-slides-wrapper {
-  display: flex;
-  width: 1920px;
-  height: 420px;
-  flex-wrap: nowrap;
-}
-
-.slider-slide {
-  width: 640px;
-  height: 420px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider-slide img {
-  height: 100%;
-}
-
-.slider-controls {
-  position: absolute;
+#main {
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
+  margin-left: 0% !important;
+}
+/* Estilos para el section del CARRUSEL DE IMÁGENES */
+#main section:first-child{
+  clear: left;
+  position: relative;
+}
+#main section:first-child h2{
+  display: none;
+}
+/* ===== Estilos para CARRUSEL DE IMAGENES ===== */
+
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 640px;
+position: relative;
+margin: auto;
 }
 
-.slider-control {
-  cursor: pointer;
-  color: #fff;
-  opacity: 0.5;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+/* Hide the images by default */
+.mySlides {
+display: none;
 }
-
-.slider-nav {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
+.mySlides img{
   width: 100%;
+  height: 420px;
+}
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
 }
 
-.slider-nav-item {
-  width: 8px;
-  height: 8px;
-  margin: 0 5px;
-  border-radius: 50%;
-  background-color: #FFF;
-  opacity: 0.5;
-  cursor: pointer;
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
 }
 
-.slider-nav-item.active {
-  opacity: 1;
-  transform: scale(1.2);
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
 }

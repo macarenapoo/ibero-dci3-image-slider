@@ -12,32 +12,34 @@
 </head>
 
 <body>
-  <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
-      <div class="slider-slide">
-        <img src="images/1.jpg" />
-      </div>
-      <div class="slider-slide">
-        <img src="images/2.jpg" />
-      </div>
-      <div class="slider-slide">
-        <img src="images/3.jpg" />
-      </div>
+  <div class="slideshow-container">
+
+  
+    <div class="mySlides fade">
+      <img src="images/1.jpg" alt="1">
     </div>
-    <div class="slider-controls">
-      <div class="slider-control">
-        <i class="fas fa-angle-left"></i>
-      </div>
-      <div class="slider-control">
-        <i class="fas fa-angle-right"></i>
-      </div>
+  
+    <div class="mySlides fade">
+      <img src="images/2.jpg" alt="2">
     </div>
-    <nav class="slider-nav">
-      <div class="slider-nav-item active"></div>
-      <div class="slider-nav-item"></div>
-      <div class="slider-nav-item"></div>
-    </nav>
+  
+    <div class="mySlides fade">
+      <img src="images/3.jpg" alt="3">
+    </div>
+  
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
+  <br>
+  
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  <script src="./carrusel.js"></script>
 </body>
 
 </html>
