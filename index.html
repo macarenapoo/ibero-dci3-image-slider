@@ -24,20 +24,23 @@
         <img src="images/3.jpg" />
       </div>
     </div>
+
     <div class="slider-controls">
       <div class="slider-control">
-        <i class="fas fa-angle-left"></i>
+        <i class="fas fa-angle-left"  onclick=""></i>
       </div>
       <div class="slider-control">
-        <i class="fas fa-angle-right"></i>
+        <i class="fas fa-angle-right" onclick=""></i>
       </div>
     </div>
+
     <nav class="slider-nav">
-      <div class="slider-nav-item active"></div>
-      <div class="slider-nav-item"></div>
-      <div class="slider-nav-item"></div>
+      <div onclick="mostrarImagenUno()" id="boton1" class="slider-nav-item active"></div>
+      <div onclick="mostrarImagenDos()" id="boton2" class="slider-nav-item"></div>
+      <div onclick="mostrarImagenTres()" id="boton3" class="slider-nav-item"></div>
     </nav>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -20,6 +20,7 @@ body {
   display: flex;
   width: 1920px;
   height: 420px;
+  margin-left: 0px;
   flex-wrap: nowrap;
 }
 
