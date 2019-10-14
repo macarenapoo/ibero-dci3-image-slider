@@ -13,14 +13,14 @@
 
 <body>
   <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
-      <div class="slider-slide">
+    <div class="slider-slides-wrapper" id="slide-wrapper">
+      <div class="slider-slide" id="slide1">
         <img src="images/1.jpg" />
       </div>
-      <div class="slider-slide">
+      <div class="slider-slide" id="slide2">
         <img src="images/2.jpg" />
       </div>
-      <div class="slider-slide">
+      <div class="slider-slide" id="slide3">
         <img src="images/3.jpg" />
       </div>
     </div>
@@ -29,15 +29,16 @@
         <i class="fas fa-angle-left"></i>
       </div>
       <div class="slider-control">
-        <i class="fas fa-angle-right"></i>
+        <a href="javascript: derecha()"><i class="fas fa-angle-right"></i></a>
       </div>
     </div>
     <nav class="slider-nav">
-      <div class="slider-nav-item active"></div>
-      <div class="slider-nav-item"></div>
-      <div class="slider-nav-item"></div>
+      <div class="slider-nav-item active" id="dot1" onclick="slide1()"></div>
+      <div class="slider-nav-item" id="dot2" onclick="slide2()"></div>
+      <div class="slider-nav-item" id="dot3" onclick="slide3()"></div>
     </nav>
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
