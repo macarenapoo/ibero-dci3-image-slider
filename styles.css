@@ -22,10 +22,14 @@ body {
   height: 420px;
   flex-wrap: nowrap;
 }
+#slide-wrapper{
+  margin-left: 0px;
+}
 
 .slider-slide {
   width: 640px;
   height: 420px;
+  margin-left: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,3 +85,9 @@ body {
   opacity: 1;
   transform: scale(1.2);
 }
+
+.active{
+  opacity: 1;
+  transform: scale(1.2);
+}
+
