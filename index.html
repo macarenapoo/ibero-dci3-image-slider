@@ -13,7 +13,7 @@
 
 <body>
   <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
+    <div class="slider-slides-wrapper" id="wrapper">
       <div class="slider-slide">
         <img src="images/1.jpg" />
       </div>
@@ -27,10 +27,10 @@
 
     <div class="slider-controls">
       <div class="slider-control">
-        <i class="fas fa-angle-left"  onclick=""></i>
+        <i class="fas fa-angle-left"  onclick="desplazarDerecha()"></i>
       </div>
       <div class="slider-control">
-        <i class="fas fa-angle-right" onclick=""></i>
+        <i id="flechaDerecha" class="fas fa-angle-right" onclick="desplazarIzquierda()"></i>
       </div>
     </div>
 
