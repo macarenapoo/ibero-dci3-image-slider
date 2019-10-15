@@ -58,6 +58,7 @@ body {
   align-items: center;
   font-size: 30px;
 }
+.slider-control a{ text-decoration: none; color:white;}
 
 .slider-nav {
   position: absolute;
