@@ -1,25 +1,6 @@
 var control = 0;
 var margen = 0;
-/*function dots() {
-    if (control = 0) {
-        // document.getElementsById("left").style.display = "none";
-        document.getElementById("dot1").classList.add("active");
-        document.getElementById("dot2").classList.remove("active");
-        document.getElementById("dot3").classList.remove("active");
-    }
-    if (control = -1) {
-        // document.getElementsById("left").style.display = "none";
-        document.getElementById("dot1").classList.remove("active");
-        document.getElementById("dot2").classList.add("active");
-        document.getElementById("dot3").classList.remove("active");
-    }
-    if (control = -2) {
-        // document.getElementsById("left").style.display = "none";
-        document.getElementById("dot1").classList.remove("active");
-        document.getElementById("dot2").classList.remove("active");
-        document.getElementById("dot3").classList.add("active");
-    }
-}*/
+
 function left() {
     if (control > -2) {
         margen -= 640;
@@ -55,4 +36,3 @@ function slide3() {
     document.getElementById("dot3").classList.add("active");
 }
 
-dots();
