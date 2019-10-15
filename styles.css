@@ -60,6 +60,10 @@ body {
   font-size: 30px;
 }
 
+.slider-control.inactive{
+  display: none;
+}
+
 .slider-nav {
   position: absolute;
   bottom: 20px;
