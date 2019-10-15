@@ -6,6 +6,7 @@ var i;
 
 function mostrarImagenUno(){
 wrapper.style.marginLeft="0px";
+control = 0;
  boton1.classList.add("active");
  boton2.classList.remove("active");
  boton3.classList.remove("active");
@@ -13,6 +14,7 @@ wrapper.style.marginLeft="0px";
 
 function mostrarImagenDos(){
 wrapper.style.marginLeft= "-640px";
+control = -1;
 boton1.classList.remove("active");
 boton2.classList.add("active");
 boton3.classList.remove("active");
@@ -21,7 +23,7 @@ boton3.classList.remove("active");
 
 function mostrarImagenTres(){
 wrapper.style.marginLeft="-1280px";
-  
+  control = -2;
 boton1.classList.remove("active");
 boton2.classList.remove("active");
 boton3.classList.add("active");
