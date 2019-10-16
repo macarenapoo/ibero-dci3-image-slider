@@ -12,8 +12,58 @@
 </head>
 
 <body>
+    <script language="javascript">
+      var margin = 0;
+      var control = 0;
+      function sliderIzquierda(){
+        if(control<0){
+          control++;
+            margin +=640;
+            document.getElementById("wrapper").style.marginLeft = margin +"px";
+            esconderFlechas();
+        } 
+      }
+      function sliderDerecha(){
+        if(control>-2){
+          control--;
+            margin -=640;
+            document.getElementById("wrapper").style.marginLeft = margin +"px"; 
+            esconderFlechas();
+        }
+      }
+      function p1(){
+          document.getElementById("wrapper").style.marginLeft="0px";
+          document.getElementById("p1").classList.add("active");
+          document.getElementById("p1").classList.add("inactive");
+          document.getElementById("p1").classList.add("inactive");
+      }
+      function p2(){
+          document.getElementById("wrapper").style.marginLeft="-640px";
+          document.getElementById("p1").classList.add("inactive");
+          document.getElementById("p1").classList.add("active");
+          document.getElementById("p1").classList.add("inactive");
+      }
+      function p3(){
+          document.getElementById("wrapper").style.marginLeft="-1280px";
+          document.getElementById("p1").classList.add("inactive");
+          document.getElementById("p1").classList.add("inactive");
+          document.getElementById("p1").classList.add("active");
+      }
+      function esconderFlechas() {
+        if (margin == 0) {
+            document.getElementById("izquierda").style.visibility = "hidden";
+        } else {
+            document.getElementById("izquierda").style.visibility = "visible";
+        }
+        if (margin == -1280) {
+            document.getElementById("derecha").style.visibility = "hidden";
+        } else {
+            document.getElementById("derecha").style.visibility = "visible";
+        }
+      }
+    </script>
   <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
+    <div class="slider-slides-wrapper" id="wrapper">
       <div class="slider-slide">
         <img src="images/1.jpg" />
       </div>
@@ -26,16 +76,16 @@
     </div>
     <div class="slider-controls">
       <div class="slider-control">
-        <i class="fas fa-angle-left"></i>
+        <i class="fas fa-angle-left" onClick="sliderIzquierda()" id="izquierda"></i>
       </div>
       <div class="slider-control">
-        <i class="fas fa-angle-right"></i>
+        <i class="fas fa-angle-right" onClick="sliderDerecha()" id="derecha"></i>
       </div>
     </div>
     <nav class="slider-nav">
-      <div class="slider-nav-item active"></div>
-      <div class="slider-nav-item"></div>
-      <div class="slider-nav-item"></div>
+      <div id= "p1" class="slider-nav-item active" onClick="p1()"></div>
+      <div id= "p2" class="slider-nav-item" onClick="p2()"></div>
+      <div id="p3" class="slider-nav-item" onClick="p3()"></div>
     </nav>
   </div>
 </body>
