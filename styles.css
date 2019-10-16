@@ -58,7 +58,9 @@ body {
   align-items: center;
   font-size: 30px;
 }
-
+.slider-control:hover{
+background-color: black;
+}
 .slider-nav {
   position: absolute;
   bottom: 20px;
@@ -78,6 +80,6 @@ body {
 }
 
 .slider-nav-item.active {
-  opacity: 1;
+  opacity: 2;
   transform: scale(1.2);
 }

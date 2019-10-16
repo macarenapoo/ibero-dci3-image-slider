@@ -13,8 +13,8 @@
 
 <body>
   <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
-      <div class="slider-slide">
+    <div class="slider-slides-wrapper" id="contenedor">
+      <div class="slider-slide" id="slider-slide">
         <img src="images/1.jpg" />
       </div>
       <div class="slider-slide">
@@ -26,18 +26,20 @@
     </div>
     <div class="slider-controls">
       <div class="slider-control">
-        <i class="fas fa-angle-left"></i>
+        
+        <i class="fas fa-angle-left" id="izq" onclick="movizq()"></i>
       </div>
       <div class="slider-control">
-        <i class="fas fa-angle-right"></i>
+       <i class="fas fa-angle-right" onclick="movDerecha()"></i>
       </div>
     </div>
-    <nav class="slider-nav">
-      <div class="slider-nav-item active"></div>
-      <div class="slider-nav-item"></div>
-      <div class="slider-nav-item"></div>
+    <nav class="slider-nav" id="slider-nav">
+      <div class="slider-nav-item" id="bola1"  onclick="bola1()" ></div>
+      <div class="slider-nav-item" id="bola2" onclick="bola2()" ></div>
+      <div class="slider-nav-item" id="bola3" onclick="bola3()"></div>
     </nav>
   </div>
+ <script src="script.js"></script>
 </body>
 
 </html>
