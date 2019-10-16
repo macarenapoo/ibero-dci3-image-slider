@@ -70,20 +70,17 @@ function desplazarDerecha(){
 function buenaImagen(){
 if(control == 0){
   clickBoton1();
-  flechaIzquierda.classList.add("inactive");
-  flechaDerecha.classList.remove("inactive");
+  
 } 
 
 if(control==-1){
   clickBoton2();
-  flechaIzquierda.classList.remove("inactive");
-  flechaDerecha.classList.remove("inactive");
+  
 }
 
 if(control==-2){
  clickBoton3();
- flechaIzquierda.classList.remove("inactive");
-flechaDerecha.classList.add("inactive");
+ 
 
 }
 }
@@ -94,6 +91,8 @@ function clickBoton1(){
    boton1.classList.add("active");
    boton2.classList.remove("active");
    boton3.classList.remove("active");
+   flechaIzquierda.classList.add("inactive");
+  flechaDerecha.classList.remove("inactive");
 }
 
 function clickBoton2(){
@@ -102,6 +101,8 @@ control = -1;
 boton1.classList.remove("active");
 boton2.classList.add("active");
 boton3.classList.remove("active");
+flechaIzquierda.classList.remove("inactive");
+  flechaDerecha.classList.remove("inactive");
 }
 
 function clickBoton3(){
@@ -110,7 +111,10 @@ function clickBoton3(){
 boton1.classList.remove("active");
 boton2.classList.remove("active");
 boton3.classList.add("active");
-
+flechaIzquierda.classList.remove("inactive");
+flechaDerecha.classList.add("inactive");
 
 }
 
+
+clickBoton1();
