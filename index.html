@@ -27,7 +27,7 @@
 
     <div class="slider-controls">
       <div class="slider-control">
-        <i class="fas fa-angle-left"  onclick="desplazarDerecha()"></i>
+        <i id="flechaIzquierda" class="fas fa-angle-left"  onclick="desplazarDerecha()"></i>
       </div>
       <div class="slider-control">
         <i id="flechaDerecha" class="fas fa-angle-right" onclick="desplazarIzquierda()"></i>
@@ -35,9 +35,9 @@
     </div>
 
     <nav class="slider-nav">
-      <div onclick="mostrarImagenUno()" id="boton1" class="slider-nav-item active"></div>
-      <div onclick="mostrarImagenDos()" id="boton2" class="slider-nav-item"></div>
-      <div onclick="mostrarImagenTres()" id="boton3" class="slider-nav-item"></div>
+      <div onclick="clickBoton1()" id="boton1" class="slider-nav-item active"></div>
+      <div onclick="clickBoton2()" id="boton2" class="slider-nav-item"></div>
+      <div onclick="clickBoton3()" id="boton3" class="slider-nav-item"></div>
     </nav>
   </div>
   <script src="script.js"></script>
