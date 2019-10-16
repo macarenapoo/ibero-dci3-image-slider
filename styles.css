@@ -20,6 +20,7 @@ body {
   display: flex;
   width: 1920px;
   height: 420px;
+  margin-left: 0px;
   flex-wrap: nowrap;
 }
 
@@ -57,6 +58,10 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 30px;
+}
+
+.inactive{
+  display: none;
 }
 
 .slider-nav {
