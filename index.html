@@ -9,11 +9,15 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
   <link href="./styles.css" rel="stylesheet" />
+
+
+  
+
 </head>
 
 <body>
-  <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
+  <div id="slider" class="slider" >
+    <div class="slider-slides-wrapper" id="wrapper">
       <div class="slider-slide">
         <img src="images/1.jpg" />
       </div>
@@ -25,19 +29,22 @@
       </div>
     </div>
     <div class="slider-controls">
-      <div class="slider-control">
-        <i class="fas fa-angle-left"></i>
+      <div class="slider-control" id="flechai" onClick = "izquierda()">
+        <i class="fas fa-angle-left" ></i>
       </div>
-      <div class="slider-control">
-        <i class="fas fa-angle-right"></i>
+      <div class="slider-control" id="flechad" onClick = "derecha()">
+        <i class="fas fa-angle-right"  ></i>
       </div>
     </div>
     <nav class="slider-nav">
-      <div class="slider-nav-item active"></div>
-      <div class="slider-nav-item"></div>
-      <div class="slider-nav-item"></div>
+      <div class="slider-nav-item" onclick="p1()" id="p1"></div>
+      <div class="slider-nav-item"  onclick="p2()" id="p2"></div>
+      <div class="slider-nav-item" onclick="p3()" id="p3"></div>
     </nav>
   </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
+
