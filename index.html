@@ -9,59 +9,10 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
   <link href="./styles.css" rel="stylesheet" />
+  <script>"./script.js"</script>
 </head>
 
 <body>
-    <script language="javascript">
-      var margin = 0;
-      var control = 0;
-      function sliderIzquierda(){
-        if(control<0){
-          control++;
-            margin +=640;
-            document.getElementById("wrapper").style.marginLeft = margin +"px";
-            esconderFlechas();
-        } 
-      }
-      function sliderDerecha(){
-        if(control>-2){
-          control--;
-            margin -=640;
-            document.getElementById("wrapper").style.marginLeft = margin +"px"; 
-            esconderFlechas();
-        }
-      }
-      function p1(){
-          document.getElementById("wrapper").style.marginLeft="0px";
-          document.getElementById("p1").classList.add("active");
-          document.getElementById("p1").classList.add("inactive");
-          document.getElementById("p1").classList.add("inactive");
-      }
-      function p2(){
-          document.getElementById("wrapper").style.marginLeft="-640px";
-          document.getElementById("p1").classList.add("inactive");
-          document.getElementById("p1").classList.add("active");
-          document.getElementById("p1").classList.add("inactive");
-      }
-      function p3(){
-          document.getElementById("wrapper").style.marginLeft="-1280px";
-          document.getElementById("p1").classList.add("inactive");
-          document.getElementById("p1").classList.add("inactive");
-          document.getElementById("p1").classList.add("active");
-      }
-      function esconderFlechas() {
-        if (margin == 0) {
-            document.getElementById("izquierda").style.visibility = "hidden";
-        } else {
-            document.getElementById("izquierda").style.visibility = "visible";
-        }
-        if (margin == -1280) {
-            document.getElementById("derecha").style.visibility = "hidden";
-        } else {
-            document.getElementById("derecha").style.visibility = "visible";
-        }
-      }
-    </script>
   <div id="slider" class="slider">
     <div class="slider-slides-wrapper" id="wrapper">
       <div class="slider-slide">
