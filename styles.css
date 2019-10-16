@@ -81,3 +81,9 @@ body {
   opacity: 1;
   transform: scale(1.2);
 }
+
+.slider-nav-item.inactive {
+  background-color: #FFF;
+  opacity: 0.5;
+  cursor: pointer;
+}
