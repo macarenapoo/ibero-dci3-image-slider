@@ -17,6 +17,7 @@ body {
 }
 
 .slider-slides-wrapper {
+
   display: flex;
   width: 1920px;
   height: 420px;

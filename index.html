@@ -9,11 +9,12 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
   <link href="./styles.css" rel="stylesheet" />
+  
 </head>
 
 <body>
   <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
+    <div class="slider-slides-wrapper" id="wrapper">
       <div class="slider-slide">
         <img src="images/1.jpg" />
       </div>
@@ -26,18 +27,19 @@
     </div>
     <div class="slider-controls">
       <div class="slider-control">
-        <i class="fas fa-angle-left"></i>
+        <i class="fas fa-angle-left" onClick="sliderIzquierda()" id="izquierda"></i>
       </div>
       <div class="slider-control">
-        <i class="fas fa-angle-right"></i>
+        <i class="fas fa-angle-right" onClick="sliderDerecha()" id="derecha"></i>
       </div>
     </div>
     <nav class="slider-nav">
-      <div class="slider-nav-item active"></div>
-      <div class="slider-nav-item"></div>
-      <div class="slider-nav-item"></div>
+      <div id= "p1" class="slider-nav-item active" onClick="p1()"></div>
+      <div id= "p2" class="slider-nav-item" onClick="p2()"></div>
+      <div id="p3" class="slider-nav-item" onClick="p3()"></div>
     </nav>
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
