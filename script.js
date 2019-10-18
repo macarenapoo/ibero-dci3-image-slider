@@ -1,108 +1,151 @@
 
-    var control = 0;
-    var mover = 0;
-     var wrap = document.getElementById("wrapper");
+   var control = 0;
+   var mover = 0;
+    var wrap = document.getElementById("wrapper");
 
-     function derecha(){
+    function derecha(){
+        if (control > -2){
+            control--;
+            
+      uno();
+        dos();
+            
+       }}
+            
+       function der(){
          if (control > -2){
              control--;
              
-       uno();
+       
          dos();
              
         }}
-             
-        function izquierda(){
-      if (control < -2){
-             control++;
-             
 
-    tres();
-         
-             
-        }
-    }
-     
-      function uno(){
-           if (control == -1){
-           
-            wrap.style.marginLeft = "-640px";
-            document.getElementById("p1").classList.remove("active");
-            document.getElementById("p2").classList.add("active");
-            document.getElementById("p3").classList.remove("active");
-   
-            document.getElementById("flechai").classList.remove("inactive");
-   
-            document.getElementById("flechad").classList.remove("inactive");
-              
-      }}
-function dos(){
-           if (control == -2){
-              wrap.style.marginLeft = "-1280px";
-              document.getElementById("flechad").classList.add("inactive");
-             document.getElementById("flechai").classList.remove("inactive");
-             document.getElementById("p1").classList.remove("active");
-             document.getElementById("p3").classList.add("active");
-             document.getElementById("p2").classList.remove("active");
-             
-            } 
-      }
-      function tres(){
-        if (control == -1){
-           
-           wrap.style.marginRight = "640px";
-           document.getElementById("p2").classList.remove("active");
-           document.getElementById("p1").classList.add("active");
+       function izquierda(){
+     if (control < 0){
+            control++;
+            
+
+   uno();
+      tres();  
+            
+       }
+   }
+
+   function izq(){ 
+     if (control < 0){
+            control++;
+            
+
+   uno();}
+
+   }
+
+   function medio(){ 
+     if (control = 0){
+            control++;
+            
+
+   tres();}
+
+   }
+    
+     function uno(){
+          if (control == -1){
+          
+           wrap.style.marginLeft = "-640px";
+           document.getElementById("p1").classList.remove("active");
+           document.getElementById("p2").classList.add("active");
            document.getElementById("p3").classList.remove("active");
   
-           document.getElementById("flechai").classList.add("inactive");
+           document.getElementById("flechai").classList.remove("inactive");
   
            document.getElementById("flechad").classList.remove("inactive");
-              alert("hola");
-           }}
+             
+     }}
+function dos(){
+          if (control == -2){
+             wrap.style.marginLeft = "-1280px";
+             document.getElementById("flechad").classList.add("inactive");
+            document.getElementById("flechai").classList.remove("inactive");
+            document.getElementById("p1").classList.remove("active");
+            document.getElementById("p3").classList.add("active");
+            document.getElementById("p2").classList.remove("active");
+            desaparecerD();
+            
+           }
+     }
+     
+          function tres(){
+           if (control == 0){
+              
+              wrap.style.marginLeft = "0px";
+              document.getElementById("p1").classList.add("active");
+              document.getElementById("p2").classList.remove("active");
+              document.getElementById("p3").classList.remove("active");
+              desaparecerI();
       
+              }}
 
-    function p1(){
-    document.getElementById("wrapper").style.marginLeft="0px";
-    document.getElementById("p1").classList.add("active");
-    document.getElementById("p2").classList.remove("active");
-    document.getElementById("p3").classList.remove("active");
-        desaparecerI();
-       
+              
+
+   function p1(){
+     if(wrap.style.marginLeft = "0px"){
+   document.getElementById("p1").classList.add("active");
+   document.getElementById("p2").classList.remove("active");
+   document.getElementById("p3").classList.remove("active");
+      desaparecerI();
+      izq();
+      
+     }
+     
 }
 
 function p2(){
-    document.getElementById("wrapper").style.marginLeft="-640px";
-    document.getElementById("p1").classList.remove("active");
-    document.getElementById("p2").classList.add("active");
-    document.getElementById("p3").classList.remove("active");
+ if(wrap.style.marginLeft = "-640px"){
+   document.getElementById("p1").classList.remove("active");
+   document.getElementById("p2").classList.add("active");
+   document.getElementById("p3").classList.remove("active");
+  
+    document.getElementById("flechai").classList.remove("inactive");
+  
+   document.getElementById("flechad").classList.remove("inactive");
+   izq();
+   medio();
+   der();
    
-     document.getElementById("flechai").classList.remove("inactive");
-   
-    document.getElementById("flechad").classList.remove("inactive");
-   
+ }
 }
 
 function p3(){
-    document.getElementById("wrapper").style.marginLeft="-1280px";
-    document.getElementById("p1").classList.remove("active");
-    document.getElementById("p2").classList.remove("active");
-    document.getElementById("p3").classList.add("active");
-desaparecerD();
-};
+ if(wrap.style.marginLeft = "-1280px"){
+   document.getElementById("p1").classList.remove("active");
+   document.getElementById("p2").classList.remove("active");
+   document.getElementById("p3").classList.add("active");
+   desaparecerD();
+   der();
+   
+ }
+}
 
 function desaparecerD(){
-  document.getElementById("wrapper").style.marginLeft="-1280px";
-    document.getElementById("flechad").classList.add("inactive");
-   document.getElementById("flechai").classList.remove("inactive");
-}
+ if(wrap.style.marginLeft = "-1280px"){
+ document.getElementById("wrapper").style.marginLeft="-1280px";
+   document.getElementById("flechad").classList.add("inactive");
+  document.getElementById("flechai").classList.remove("inactive");
+}}
 
-      function desaparecerI(){
-  document.getElementById("wrapper").style.marginLeft="0px";
-    document.getElementById("flechai").classList.add("inactive");
-   document.getElementById("flechad").classList.remove("inactive");
-       
-     document.getElementById("flechad").style.marginLeft="590px";
-         
-}
-   
+     function desaparecerI(){
+      if(wrap.style.marginLeft = "0px"){
+   document.getElementById("flechai").classList.add("inactive");
+  document.getElementById("flechad").classList.remove("inactive");
+      
+    document.getElementById("flechad").style.marginLeft="590px";
+        
+}}
+
+
+
+desaparecerD();
+desaparecerI();
+p1();
