@@ -13,7 +13,7 @@
 
 <body>
   <div id="slider" class="slider">
-    <div class="slider-slides-wrapper">
+    <div id="wrapper" class="slider-slides-wrapper">
       <div class="slider-slide">
         <img src="images/1.jpg" />
       </div>
@@ -25,10 +25,10 @@
       </div>
     </div>
     <div class="slider-controls">
-      <div class="slider-control">
+      <div class="slider-control" onclick="prevSlide()">
         <i class="fas fa-angle-left"></i>
       </div>
-      <div class="slider-control">
+      <div class="slider-control" onclick="nextSlide()">
         <i class="fas fa-angle-right"></i>
       </div>
     </div>
@@ -38,6 +38,7 @@
       <div class="slider-nav-item"></div>
     </nav>
   </div>
+  <script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>
