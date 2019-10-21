@@ -48,7 +48,16 @@ function updateNav() {
     navItems[currentSlide].classList.add("active");
 }
 
-
+function automateSlider() {
+    setTimeout(function() {
+        if (currentSlide === slides.length -1) {
+            goToSlide(0);
+        } else {
+            nextSlide();
+        }
+        automateSlider();
+    }, 3000);
+}
  
-
 updateArrows();
+automateSlider();
