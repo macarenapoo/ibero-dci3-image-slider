@@ -13,9 +13,15 @@ function prevSlide() {
     updateWrapperPosition();
 }
 
+function goToSlide(slide) {
+  currentSlide = slide;
+  updateWrapperPosition();
+}
+
 function updateWrapperPosition() {
     wrapper.style.marginLeft = - (slideWidth * currentSlide) + "px";
     updateArrows();
+    updateNav();
 }
 
 function updateArrows() {
@@ -33,5 +39,16 @@ function updateArrows() {
         rightArrow.style.visibility = "visible";
     }
 }
+
+function updateNav() {
+    var navItems = document.getElementsByClassName("slider-nav-item");
+    Array.from(navItems).forEach( function(item) {
+        item.classList.remove("active");
+    });
+    navItems[currentSlide].classList.add("active");
+}
+
+
+ 
 
 updateArrows();
